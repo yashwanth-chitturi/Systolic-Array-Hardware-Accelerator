@@ -1,0 +1,40 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 24.05.2026 16:07:51
+// Design Name: 
+// Module Name: TB_out_crossbar
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module TB_out_crossbar(
+
+
+    input  wire [15:0] in0,
+    input  wire [15:0] in1,
+
+    input  wire       sel,
+
+    output wire [15:0] out0,
+    output wire [15:0] out1
+
+);
+
+    assign out0 = (sel == 1'b0) ? in0 : in1;
+
+    assign out1 = out0;
+
+endmodule
